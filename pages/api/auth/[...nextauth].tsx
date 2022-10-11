@@ -11,8 +11,8 @@ export const authOptions: NextAuthOptions = {
       clientSecret: process.env.GITHUB_SECRET ?? "",
     }),
   ],
-  adapter: MongoDBAdapter(clientPromise),
-  debug: process.env.NODE_ENV === "development",
+  adapter: MongoDBAdapter(clientPromise), //comment it if you don't want to use MongoDB
+  debug: true,
   secret: process.env.NEXTAUTH_SECRET,
   theme: {
     colorScheme: "light",
